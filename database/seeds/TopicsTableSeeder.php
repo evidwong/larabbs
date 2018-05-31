@@ -28,7 +28,6 @@ class TopicsTableSeeder extends Seeder
                 $topic->category_id = $faker->randomElement($category_ids);
             });
 
-        
         // 将数据集合转换为数组，并插入到数据库中
         Topic::insert($topics->toArray());
     }
