@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', ['uses'=>'PagesController@root'])->name('root');
+Route::get('/', ['uses' => 'PagesController@root'])->name('root');
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -32,3 +32,6 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+
+Route::resource('categories', 'CategoriesController', ['only' => 'show']);
